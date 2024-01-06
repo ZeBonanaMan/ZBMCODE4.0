@@ -3,30 +3,30 @@ from tkinter import font
 
 
 def calculate():
-    try:
-        num_1 = number1_entry.get()
-        num_2 = number2_entry.get()
-        num_3 = number3_entry.get()
+    num_1 = number1_entry.get()
+    num_2 = number2_entry.get()
+    num_3 = number3_entry.get()
     
-    #phase1
-        if num_1 <= num_2:
+    try:
+        #phase1
+        if int(num_1) <= int(num_2):
             temp_biggest = num_2
-            if temp_biggest <= num_3:
+
+            #phase2
+            if int(temp_biggest) <= int(num_3):
                     temp_biggest = num_3
                     display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
             else:
                 display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
         else: 
             temp_biggest = num_1
-            if temp_biggest <= num_3:
+            if int(temp_biggest) <= int(num_3):
                     temp_biggest = num_3
                     display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
             else:
                 display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
-            
-        
     except ValueError:
-        display_label.config(text="Please enter a valid number.")
+         display_label.config(text="Please input valid values")
 
 win=tk.Tk()
 win.title("if-else statement")
