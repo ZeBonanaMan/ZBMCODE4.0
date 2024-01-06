@@ -20,9 +20,6 @@ bg_color = "#2a2a2a"
 fg_color = "#FFFFFF"
 label_color = "#2d9dbd"
 input_bg_color = "#545454"
-button_bg_color = "#2a2a2a"
-apple_color = "#ed2939"
-money_color  ="#3cb043"
 
 win.config(bg=bg_color)
 
