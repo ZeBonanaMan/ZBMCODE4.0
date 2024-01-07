@@ -53,17 +53,23 @@ final_font = font.Font(size=20)
 
 number1_label = tk.Label()
 number1_label.pack
-number1_entry = tk.Entry(left_frame, bg=bg_color, fg=num_1_color, font=final_font)
+number1_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_1_color, font=final_font)
 number1_entry.pack()
+
+spacer = tk.Label(left_frame, bg=bg_color)
+spacer.pack()
 
 number2_label = tk.Label()
 number2_label.pack
-number2_entry = tk.Entry(left_frame, bg=bg_color, fg=num_2_color, font=final_font)
+number2_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_2_color, font=final_font)
 number2_entry.pack()
+
+spacer = tk.Label(left_frame, bg=bg_color)
+spacer.pack()
 
 number3_label = tk.Label()
 number3_label.pack
-number3_entry = tk.Entry(left_frame, bg=bg_color, fg=num_3_color, font=final_font)
+number3_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_3_color, font=final_font)
 number3_entry.pack()
 
 spacer = tk.Label(left_frame, bg=bg_color)
