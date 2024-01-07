@@ -15,16 +15,17 @@ def calculate():
             #phase2
             if int(temp_biggest) <= int(num_3):
                     temp_biggest = num_3
-                    display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
+                    display_label.config(text=f"The biggest value is: {temp_biggest}")
             else:
-                display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
+                display_label.config(text=f"The biggest value is: {temp_biggest}")
         else: 
             temp_biggest = num_1
             if int(temp_biggest) <= int(num_3):
                     temp_biggest = num_3
-                    display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
+                    display_label.config(text=f"The biggest value is: {temp_biggest}")
             else:
-                display_label.config(text=f"ang pinakamataas ay: {temp_biggest}")
+                display_label.config(text=f"The biggest value is: {temp_biggest}")
+                
     except ValueError:
          display_label.config(text="Please input valid values")
 
