@@ -9,12 +9,11 @@ def calculate():
     num_filled = sum(bool(num) for num in [num_1, num_2, num_3])
 
     if num_filled == 0:
-        display_label.config(text="Please fill at least two spaces")
+        display_label.config(text="Please fill at least two spaces with valid values")
         return
     if num_filled == 1:
-        display_label.config(text="Please fill at least two spaces")
-        return
-    
+        display_label.config(text="Please fill at least two spaces with valid values")
+        return 
     try:
         if num_filled == 2:
             if num_1 and num_2:
@@ -34,31 +33,29 @@ def calculate():
                     temp_biggest = num_2
             display_label.config(text=f"The biggest value is: {temp_biggest}")
             return
-        
-        #phase1
+        #phase 1
         if num_filled == 3:
             if float(num_1) <= float(num_2):
                 temp_biggest = num_2
-                #phase2
+                #phase 2
                 if float(temp_biggest) <= float(num_3):
-                        temp_biggest = num_3
-                        display_label.config(text=f"The biggest value is: {temp_biggest}")
+                    temp_biggest = num_3
+                    display_label.config(text=f"The biggest value is: {temp_biggest}")
                 else:
                     display_label.config(text=f"The biggest value is: {temp_biggest}")
             else: 
                 temp_biggest = num_1
                 if float(temp_biggest) <= float(num_3):
-                        temp_biggest = num_3
-                        display_label.config(text=f"The biggest value is: {temp_biggest}")
+                    temp_biggest = num_3
+                    display_label.config(text=f"The biggest value is: {temp_biggest}")
                 else:
                     display_label.config(text=f"The biggest value is: {temp_biggest}")
-
     except ValueError:
         display_label.config(text="Please fill the spaces with valid values")
 
 win=tk.Tk()
 win.title("Number Differentiator-inator")
-win.geometry("700x500")
+win.geometry("850x500")
 
 #darkmode parameters
 bg_color = "#2a2a2a"
