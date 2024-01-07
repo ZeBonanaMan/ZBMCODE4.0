@@ -9,18 +9,18 @@ def calculate():
     
     try:
         #phase1
-        if int(num_1) <= int(num_2):
+        if float(num_1) <= float(num_2):
             temp_biggest = num_2
 
             #phase2
-            if int(temp_biggest) <= int(num_3):
+            if float(temp_biggest) <= float(num_3):
                     temp_biggest = num_3
                     display_label.config(text=f"The biggest value is: {temp_biggest}")
             else:
                 display_label.config(text=f"The biggest value is: {temp_biggest}")
         else: 
             temp_biggest = num_1
-            if int(temp_biggest) <= int(num_3):
+            if float(temp_biggest) <= float(num_3):
                     temp_biggest = num_3
                     display_label.config(text=f"The biggest value is: {temp_biggest}")
             else:
