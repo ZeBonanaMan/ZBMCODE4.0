@@ -30,7 +30,7 @@ def calculate():
 
 win=tk.Tk()
 win.title("Biggest Number Calculator")
-win.geometry("750x300")
+win.geometry("500x350")
 
 #darkmode parameters
 bg_color = "#2a2a2a"
@@ -43,42 +43,45 @@ input_bg_color = "#545454"
 
 win.config(bg=bg_color)
 
-left_frame = tk.Frame(bg=bg_color)
-left_frame.pack(side=tk.LEFT, padx=10)
-
-right_frame = tk.Frame(bg=bg_color)
-right_frame.pack(side=tk.RIGHT, padx=10)
-
 final_font = font.Font(size=20)
+
+spacer = tk.Label(bg=bg_color)
+spacer.pack()
+
+title_label = tk.Label(text="Which is the biggest?", bg=bg_color, fg=fg_color, font=final_font)
+title_label.pack()
 
 number1_label = tk.Label()
 number1_label.pack
-number1_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_1_color, font=final_font)
+number1_entry = tk.Entry(bg=input_bg_color, fg=num_1_color, font=final_font, justify= "center")
 number1_entry.pack()
 
-spacer = tk.Label(left_frame, bg=bg_color)
+spacer = tk.Label(bg=bg_color)
 spacer.pack()
 
 number2_label = tk.Label()
 number2_label.pack
-number2_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_2_color, font=final_font)
+number2_entry = tk.Entry(bg=input_bg_color, fg=num_2_color, font=final_font, justify= "center")
 number2_entry.pack()
 
-spacer = tk.Label(left_frame, bg=bg_color)
+spacer = tk.Label(bg=bg_color)
 spacer.pack()
 
 number3_label = tk.Label()
 number3_label.pack
-number3_entry = tk.Entry(left_frame, bg=input_bg_color, fg=num_3_color, font=final_font)
+number3_entry = tk.Entry(bg=input_bg_color, fg=num_3_color, font=final_font, justify= "center")
 number3_entry.pack()
 
-spacer = tk.Label(left_frame, bg=bg_color)
+spacer = tk.Label(bg=bg_color)
 spacer.pack()
 
-calculate_button = tk.Button(left_frame, bg=bg_color, fg=fg_color, text="Calculate", command=calculate,)
+calculate_button = tk.Button(bg=bg_color, fg=fg_color, text="Calculate", command=calculate,)
 calculate_button.pack()
 
-display_label = tk.Label(right_frame, text="Which is the biggest?", bg=bg_color, fg=label_color, font=final_font)
+spacer = tk.Label(bg=bg_color)
+spacer.pack()
+
+display_label = tk.Label(bg=bg_color, fg=label_color, font=final_font)
 display_label.pack()
 
 win.mainloop()
